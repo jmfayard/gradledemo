@@ -20,9 +20,10 @@ object Config {
 
     object SdkVersions {
         val versionCode = 1
+        val versionName = "0.$versionCode"
         val compile = 28
-        val target = 26
-        val min = 19
+        val target = 28
+        val min = 21
     }
 
 }

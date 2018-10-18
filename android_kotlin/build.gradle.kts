@@ -1,10 +1,11 @@
 import Config.SdkVersions.versionCode
+import sun.java2d.xr.XRUtils.GOOD
 
 plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-android-extensions")
-    id("my.CustomPlugin")
+    id("my.CustomPlugin") //GOOD
 }
 
 android {
@@ -43,6 +44,6 @@ dependencies {
 
 
 
-custom {
+custom {            // GOOD
     helloWorld = "Bonjour tout le monde!"
 }

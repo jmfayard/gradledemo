@@ -14,6 +14,16 @@ buildscript {
         mavenCentral()
         jcenter()
         maven("https://maven.fabric.io/public")
+
+        //BAD: gradle properties / system properties / environment variables
+//        maven(url = "$artifactory_contextUrl/libs-snapshot-local") {
+//            name = "libs-snapshot-local"
+//            credentials {
+//                username = artifactory_user
+//                password = artifactory_password
+//            }
+//        }
+
     }
 
     dependencies {
@@ -23,6 +33,7 @@ buildscript {
         classpath(Config.Plugins.googleplay_publisher)
         classpath(Config.Plugins.git)
         classpath(Config.Plugins.fabric)
+
     }
 }
 plugins {
