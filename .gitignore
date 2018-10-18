@@ -1,0 +1,9 @@
+.gradle/
+build/
+.idea/
+*.iml
+local.properties
+.jcd-bkp/
+.jcdworkspace
+jcd.debuginfo
+upload.keystore
