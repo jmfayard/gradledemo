@@ -8,16 +8,13 @@ repositories {
     jcenter()
     google()
 }
-dependencies {
-    implementation("com.android.tools.build:gradle:3.2.0")
-}
 tasks.withType(Test::class.java).configureEach {
     useTestNG()
 }
 
-//kotlinDslPluginOptions {
-//    experimentalWarning.set(false)
-//}
+kotlinDslPluginOptions {
+    experimentalWarning.set(false)
+}
 gradlePlugin {
     plugins {
         create("my.CustomPlugin") {

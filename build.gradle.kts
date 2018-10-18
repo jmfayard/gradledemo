@@ -17,7 +17,7 @@ buildscript {
     }
 
     dependencies {
-        classpath(Config.Plugins.kotlin)
+//        classpath(Config.Plugins.kotlin)
         classpath(Config.Plugins.androidGradlePlugin)
         classpath(Config.Plugins.dexcount)
         classpath(Config.Plugins.googleplay_publisher)
@@ -27,10 +27,10 @@ buildscript {
 }
 plugins {
     id("com.gradle.build-scan") version "1.15.1"
-    id("com.github.ben-manes.versions") version "0.20.0"
     id("jmfayard.github.io.gradle-kotlin-dsl-libs") version "0.2.3" // $ gw syncLibs
     id("com.jfrog.artifactory") version "4.7.5"
     id("my.CustomPlugin") apply false
+    `kotlin-dsl`
 
 }
 

@@ -1,20 +1,12 @@
 @file:JvmName("Projects")
 
-import com.android.build.gradle.internal.dsl.DefaultConfig
 import org.gradle.api.Project
 
 
 fun Project.doSomethingUseful() {
-    println("Hello world project $name!")
+    println("doSomethingUseful() for project: $name!")
 }
 
-fun DefaultConfig.addResValues(
-        vararg entries: Pair<String, String>
-)  {
-    for ((key, value) in entries) {
-        resValue("string", key, value)
-    }
-}
 
 
 fun Project.showInGradleHelp(

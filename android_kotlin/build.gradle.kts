@@ -1,5 +1,4 @@
 import Config.SdkVersions.versionCode
-import com.android.build.gradle.ProguardFiles.getDefaultProguardFile
 
 plugins {
     id("com.android.application")
@@ -7,13 +6,7 @@ plugins {
     id("kotlin-android-extensions")
     id("my.CustomPlugin")
 }
-configure<my.CustomPluginExtension> {
-    helloWorld = "Bonjour tout le monde!"
-}
-// ... OR ...
-//custom {
-//    helloWorld = "Bonjour tout le monde!"
-//}
+
 android {
     compileSdkVersion(28)
 
@@ -39,15 +32,17 @@ android {
 
 
 dependencies {
+//    implementation("com.android.support:appcompat-v7:28.0.0")
+
 //    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-//    implementation(Libs.kotlin_stdlib_jdk7)
-//    implementation(Libs.com_android_support_appcompat_v7)
-//    implementation(Libs.constraint_layout)
-//    testImplementation(Libs.junit)
+    implementation(Libs.kotlin_stdlib_jdk7)
+    implementation(Libs.com_android_support_appcompat_v7)
+    implementation(Libs.constraint_layout)
+    testImplementation(Libs.junit)
 }
 
 
 
-configure<my.CustomPluginExtension> {
+custom {
     helloWorld = "Bonjour tout le monde!"
 }
