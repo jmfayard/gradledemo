@@ -47,3 +47,5 @@ dependencies {
 custom {            // GOOD
     helloWorld = "Bonjour tout le monde!"
 }
+
+project.kt.doSomethingCool()

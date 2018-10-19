@@ -41,3 +41,5 @@ dependencies {
 custom {
     helloWorld = "おはよう ございます"
 }
+
+project.kt.doSomethingCool()
