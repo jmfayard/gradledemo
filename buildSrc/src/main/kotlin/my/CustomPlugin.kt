@@ -31,7 +31,7 @@ open class CustomPlugin : Plugin<Project> {
                 ProjectKt::class,
                 project
         )
-        project.tasks.register("hello") {
+        project.tasks.register("hola") {
             group = "Custom"
             doLast {
                 println(extension.helloWorld)

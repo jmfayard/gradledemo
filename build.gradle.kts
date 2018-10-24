@@ -1,4 +1,5 @@
 import my.CustomPluginExtension
+import org.example.greeting.Greeting
 import org.jetbrains.kotlin.cli.jvm.main
 import org.jfrog.gradle.plugin.artifactory.dsl.ArtifactoryPluginConvention
 import org.jfrog.gradle.plugin.artifactory.dsl.DoubleDelegateWrapper
@@ -42,8 +43,14 @@ plugins {
     id("com.jfrog.artifactory") version "4.7.5"
     id("my.CustomPlugin") apply false
     `kotlin-dsl`
-
 }
+apply<org.example.greeting.GreetingPlugin>()
+
+tasks.getByName<Greeting>("hello") {
+    message = "Hi"
+    recipient = "Gradle"
+}
+
 
 
 allprojects {
