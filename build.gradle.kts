@@ -43,8 +43,9 @@ plugins {
     id("com.jfrog.artifactory") version "4.7.5"
     id("my.CustomPlugin") apply false
     `kotlin-dsl`
+    id("org.example.greeting")
 }
-apply<org.example.greeting.GreetingPlugin>()
+
 
 tasks.getByName<Greeting>("hello") {
     message = "Hi"
