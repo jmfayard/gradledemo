@@ -1,9 +1,9 @@
 package org.example.greeting
 
-import org.gradle.api.DefaultTask
+import org.gradle.api.AllOpenTask
 import org.gradle.api.tasks.TaskAction
 
-open class Greeting : DefaultTask() {
+class Greeting : AllOpenTask() {
   var message: String = ""
   var recipient: String = ""
 

@@ -7,7 +7,16 @@ plugins {
 // OPTIONAL, SEE https://plugins.gradle.org/docs/publish-plugin
 //    id("com.gradle.plugin-publish") version "0.10.0"
 
+    /** Apply the allopen compiler plugin **/
+    id("org.jetbrains.kotlin.plugin.allopen") version "1.2.61"
+
 }
+
+/** Configure allopen compiler plugin **/
+allOpen {
+    annotation("org.gradle.api.AllOpen")
+}
+
 repositories {
     mavenCentral()
     jcenter()
